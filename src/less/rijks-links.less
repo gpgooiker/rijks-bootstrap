@@ -1,0 +1,543 @@
+@path-sprites: '../images/';
+
+//Font Awesome mixin for use in :before :after
+.fa () {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//Rijksoverheid links definition
+//=======================================================
+
+a.back-link,
+a.external-link,
+a.internal-link,
+.btn-link.internal-link,
+button.show-more,
+button.show-less,
+.mailto-link {
+    cursor: pointer;
+    background-image: url("@{path-sprites}inline.png");
+    background-repeat: no-repeat;
+    .lh-transition(all .5s);
+
+}
+
+a.external-link {
+    padding-left: 15px;
+    background-position: left -169px;
+
+}
+
+[class$="-link"] img {
+    margin-right: 5px;
+}
+
+a.back-link {
+    padding-left: 18px;
+    background-position: left -825px;
+}
+
+a.internal-link {
+    padding-right: 18px;
+    background-position: right -255px;
+}
+
+.btn-link.internal-link {
+    padding-right: 18px;
+    background-position: right -255px;
+}
+
+a.mailto-link {
+    padding-left: 15px;
+    background: url("@{path-sprites}icon-mail.png") no-repeat left 5px;
+}
+
+.content a.pdf-link,
+.content a.word-link {
+    text-decoration: none;
+
+    span {
+        text-decoration: underline;
+
+        &.meta {
+            color: @gray; //#4e4e4e;
+            text-decoration: none;
+            font-size: 0.85em;
+        }
+
+    }
+}
+//Horizontal line in asside see
+.aside {
+    hr {
+        margin:0 0 10px;
+    }
+}
+
+a.pdf-link {
+    background: url("@{path-sprites}icon-pdf.png") no-repeat left top;
+    padding-left: 20px;
+}
+
+a.word-link {
+    background: url("@{path-sprites}icon-word.png") no-repeat left top;
+    padding-left: 20px;
+}
+
+button.show-more{
+    line-height: 1;
+    text-decoration: underline;
+}
+
+button.show-more {
+    &[aria-expanded="false"] {
+        padding: 0 20px 0 0;
+        background-position: right -510px;
+    }
+    &[aria-expanded="true"] {
+             padding: 0 20px 0 0;
+             background-position: right -595px;
+    }
+}
+
+.content ol.quickLinks li,
+.content ul.quickLinks li {
+    list-style: none;
+    padding-left: 25px;
+    color: #154273;
+    background: url("@{path-sprites}sprite-icons-xl-1.2.png") no-repeat;
+    background-position: -103px -448px;
+    margin-bottom: 10px;
+}
+
+.content ul.quickLinks li.pdf {
+    background-image: url("@{path-sprites}icon-pdf.png");
+    background-position: left 5px;
+}
+
+.content ul.quickLinks li.word {
+    background-image: url("@{path-sprites}icon-word.png");
+    background-position: left 5px;
+}
+
+//Page loading block definition
+//=========================================================
+
+.page-loading-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .65);
+    z-index: 999999999;
+    cursor: wait;
+}
+
+.page-loading {
+    min-width: 250px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    padding: 10px 50px 10px 50px;
+    .translate(-50%, 0);
+    background: @brand-warning;
+
+    h2, h3 {
+        white-space: nowrap;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        margin-bottom: 5px;
+    }
+
+    .loader {
+        position: absolute;
+        overflow: auto;
+        top: 13px;
+        left: 10px;
+    }
+
+    .box {
+        width: 5px;
+        height: 5px;
+        position: relative;
+        margin: 2px;
+        padding: 0;
+        float: left;
+        border: none;
+        background: black;
+        .lh-animation( popFadeIn 1.4s ease-in infinite );
+        .lh-animation-fill-mode(both);
+    }
+
+    .box.one {
+        .lh-animation-delay(-0.32s);
+    }
+
+    .box.two {
+        .lh-animation-delay(-0.16s);
+    }
+
+    .lh-keyframes(~'popFadeIn, 0%, 80%, 100% {transform: scale(0.0);opacity:0} 40% {transform: scale(1.0);opacity:1}');
+}
+
+
+//Disapearing placeholders
+[placeholder] {
+
+    &:focus::-webkit-input-placeholder {
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    &:focus:-moz-placeholder {
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    &:focus::-moz-placeholder {
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    &:focus:-ms-input-placeholder {
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+}
+
+// Progress arrows
+.progressbar {
+    margin: 0 0 15px 0;
+    .clearfix();
+}
+
+.progressbar .item {
+
+    background-color: @progress-default-bg;
+    color: @text-color;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    border-left: solid 5px #ffffff;
+    cursor: not-allowed;
+
+    &:first-child .left-cut {
+        display: none;
+    }
+
+    .left-cut,
+    .right-cut {
+        width: 0;
+        height: 0;
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+        position: relative;
+        top: 0;
+    }
+
+    .left-cut {
+        border-left: 14px solid #ffffff;
+        float: left;
+    }
+
+    .right-cut {
+        border-left: 14px solid @progress-default-bg;
+        float: right;
+        right: -14px;
+        z-index: 99;
+    }
+
+    .center-label {
+        float: left;
+        margin-left: -5px;
+        width: 100%;
+        margin-right: -50px;
+        text-align: center;
+    }
+
+    span.step-title {
+        margin-left: 10px;
+    }
+
+    &.visited {
+        color: @text-color;
+        background-color: @progress-visited-bg;
+        cursor: pointer;
+
+        .right-cut {
+            border-left-color: @progress-visited-bg;
+        }
+
+        .left-cut {
+            border-left: 14px solid @progress-cut-color;
+            background-color: @progress-visited-bg;
+            float: left;
+        }
+    }
+
+    &.active {
+        color: @text-color;
+        background-color: @progress-active-bg;
+        cursor: pointer;
+        .right-cut {
+            border-left-color: @progress-active-bg;
+        }
+    }
+}
+
+
+//Paginator
+.paginator {
+    .clearfix();
+    border-top: 2px solid @brand-primary;
+    padding: 0 10px;
+
+    ul.pag-nav {
+        padding: 0;
+        list-style: none;
+        margin:0;
+        font-size: 1em;
+    }
+    ul.pag-nav li {
+        float: left;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: bold;
+
+        a,
+        .page-number,
+        &.page-all a,
+        &.page-all span,
+        .page-label span {
+            display: block;
+            padding: 0 8px;
+            line-height: 2em;
+            white-space: nowrap;
+            color: @text-color;
+            border-bottom: 1px solid transparent;
+        }
+
+        a,
+        .page-number {
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid @brand-primary;
+            }
+        }
+
+        &.active.page-all span,
+        &.active .page-number {
+            color: white;
+            background-color: @brand-primary;
+            border-bottom: 1px solid @brand-primary;
+        }
+
+        &.prev,
+        &.next {
+            width: 2em;
+            a {
+                width: auto;
+                border-bottom: 1px solid transparent;
+
+                &:hover,
+                &:focus {
+                    color: @brand-primary;
+                }
+            }
+        }
+        &.page-label,
+        &.prev {
+            margin-right: 5px;
+        }
+
+        &.next {
+            margin-left: 5px;
+        }
+
+        &.page-all {
+            width: auto;
+        }
+
+    }
+
+    .form-horizontal .form-control {
+        margin-top: 2px;
+        height: 2em;
+        border-bottom: 2px solid @brand-primary;
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .paginator {
+
+        ul.pag-nav li {
+            display: none;
+
+            &.prev,
+            &.next,
+            &.active {
+                display: list-item;
+            }
+         }
+        ul.pag-nav.items-per-page li {
+            display: list-item;
+        }
+    }
+}
+
+.horizontal-line-1 {
+    background-color: @brand-primary;
+}
+
+.rl-tableHolder table th {
+    background-color: @brand-danger-lighter;
+}
+
+/*Custom addons*/
+.left-inner-addon,
+.right-inner-addon {
+    position: relative;
+    overflow: hidden;
+}
+
+.left-inner-addon input {
+    padding-left: 30px;
+}
+
+
+.left-inner-addon button,
+.right-inner-addon button {
+    background: none;
+    border: 0;
+    line-height: 40px;
+    display: block;
+    position: absolute;
+    top: 1px;
+    padding: 0 10px;
+    text-decoration: none;
+    .lh-transition(all .2s);
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: @brand-primary;
+    }
+
+    &.clear-filter {
+        .lh-translateX(40px);
+        font-size: 20px;
+    }
+}
+
+.filter-active.left-inner-addon button.clear-filter,
+.filter-active.right-inner-addon button.clear-filter {
+    .lh-translateX(0px);
+}
+
+
+
+.left-inner-addon button {
+    left: 0; // (@grid-gutter-width / 2);
+}
+
+.right-inner-addon button {
+    right: 0 ;//(@grid-gutter-width / 2);
+}
+
+.right-inner-addon {
+    position: relative;
+}
+
+.right-inner-addon input {
+    padding-right: 30px;
+}
+
+
+
+.highlight-search-text {
+    background-color: yellow;
+}
+
+//Overrride normal < IE10 bahavior on fields.
+#houderKoppelingenOverzichtInputFilter::-ms-clear {
+    display: none;
+}
+
+//Tooltip
+.tooltip-container {
+    padding-right: (@grid-gutter-width /2);
+    position: relative;
+    display: inline-block;
+}
+
+
+.well .tooltip-container {
+    padding: 0;
+    position: absolute;
+    top: @well-pading;
+    right: 0;
+
+    .form-tip.form-tip-right.active {
+        margin-left: (@grid-gutter-width /2);
+    }
+}
+
+.tooltip-toggle,
+.tooltip-toggle:hover,
+.tooltip-toggle:focus,
+.tooltip-toggle:active {
+
+    &:before {
+        line-height: 1.4em;
+        font-size: 1.15em;
+    }
+
+    border: none;
+    padding: 0 5px;
+    color: #fff;
+    background-color: @brand-info;
+}
+
+
+@media (max-width: @screen-md-min) {
+
+    .well .tooltip-container {
+        text-align: right;
+    }
+
+    .tooltip-container,
+    .well .tooltip-container {
+
+        position: relative;
+        top: auto;
+        right: auto;
+        display: block;
+
+        //hide arrow top
+        .form-tip.form-tip-right.active {
+            &:before {
+                display: none;
+            }
+
+            text-align: left;
+            margin-left: inherit;
+            margin-bottom: 15px;
+        }
+    }
+}

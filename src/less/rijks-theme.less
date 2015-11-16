@@ -1,0 +1,173 @@
+/**
+ * Styling for the Rijkshuisstijl
+ */
+//
+// Load core variables and mixins
+// --------------------------------------------------
+@import "variables.less";
+@import "mixins.less";
+
+@main-top-space-height: 30px;
+
+body {
+    overflow-y: scroll;
+}
+#page-wrapper {
+    .lh-box-shadow( 0 0 15px rgba(0,0,0, .5));
+}
+#header {
+    background-color: #fff;
+}
+
+ul.navigation,
+ul.navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul.navigation ul {
+    list-style-type: none;
+}
+
+div#logo {
+
+    height: 87px;
+
+    a {
+        display: block;
+        position: absolute;
+        left: 50%;
+        margin-left: -22px;
+    }
+}
+
+#logo-bottom {
+    text-align: center;
+    margin-top: @main-top-space-height;
+    line-height: 1px;
+    &:before {
+        content: '';
+        height: 28px;
+        background: #154273;
+        width: 44px;
+        display: inline-block;
+    }
+}
+
+#app-name {
+    background-color: @brand-lightest;
+    & > div {
+        padding: 0 (@grid-gutter-width /2 );
+        overflow: hidden;
+    }
+}
+
+
+
+#main-navigation {
+    overflow: hidden;
+}
+
+#content-wrapper {
+    background-color: #fff;
+    margin-bottom: (@grid-gutter-width * 3);
+}
+
+#main-container {
+    min-height: 400px;
+}
+
+#sub-nav {
+    padding-top: @main-top-space-height;
+
+    li {
+
+        a {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            text-decoration: none;
+            color: @text-color;
+            display: block;
+            padding: 0 1em 0 2.1em;
+            background-image: url("../images/inline.png");
+            background-repeat: no-repeat;
+            background-position: 1em -251px;
+            line-height: 1.8em;
+
+            .lh-transition(background-color .3s);
+
+            &.open {
+                background: url("../images/inline.png") no-repeat 1em -505px;
+                background-color: @brand-lightest;
+            }
+            &.active,
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: @brand-lighter;
+            }
+        }
+
+        li a {
+            padding: 0 1em 0 3em;
+            background: url("../images/inline.png") no-repeat 2.1em -249px;
+
+        }
+    }
+}
+
+#breadcrumbs-wrapper {
+    min-height: @main-top-space-height;
+}
+
+#nav-footer {
+    margin: (@grid-gutter-width /2) @grid-gutter-width;
+    font-size: 12px;
+
+    li {
+        display: inline-block;
+
+        a {
+            text-decoration: none;
+            color: @text-color;
+            display: block;
+            padding: 0 .4em;
+            line-height: 1.2em;
+            border-right: 1px solid #000;
+
+            &:hover {
+                color: @link-color;
+                text-decoration: underline;
+            }
+            &.alpha {
+                padding-left: 0;
+            }
+            &.omega {
+                border: none;
+            }
+        }
+    }
+}
+
+.footer {
+    background: @gray-lighter;
+    padding: 0;
+    position: relative;
+    overflow: auto;
+    width: 100%;
+}
+
+.table-placeholder-text {
+
+    position: absolute;
+    font-size: 2.2em;
+    color: #ddd;
+    top: 20%;
+    width: 100%;
+}
+
+.into-text {
+    margin-bottom: @grid-gutter-width;
+}

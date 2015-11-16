@@ -1,0 +1,112 @@
+// Core variables and mixins remove when less merge
+@import "variables.less";
+@import "mixins.less";
+
+/*** adding the class sf-navbar in addition to sf-menu creates an all-horizontal nav-bar menu ***/
+.sf-navbar {
+	background-color: @brand-primary;
+	width: 100%;
+	position: relative;
+	padding-top: 5px;
+	margin-bottom: 35px;
+}
+
+#home {
+	margin-left: 20px;
+}
+/* provide background colour for submenu strip */
+/* you should just set the menu's container bg colour rather than use pseudo-elements */
+.sf-navbar:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	z-index: -1;
+	background-color: @brand-lighter;
+//	height: 200%;
+	width: 100%;
+}
+.sf-navbar ul {
+	box-shadow: none;
+}
+.sf-navbar li {
+	background: @brand-primary;
+	position: static;
+}
+.sf-navbar > li > a,
+.sf-navbar > li > ul > li > a {
+	border: none;
+}
+.sf-navbar > li > ul {
+    padding-top: 10px;
+	min-width: 36em; /* set this to whatever suits your design */
+}
+.sf-navbar ul li {
+	background: @brand-lighter;
+	position: relative;
+}
+.sf-navbar ul ul {
+	left: 0;
+	top: 100%;
+}
+.sf-navbar ul ul li {
+	width: 100%;
+}
+.sf-navbar > li > ul > li {
+	float: left;
+}
+.sf-navbar li.current {
+	background: @brand-lighter;
+	a {
+		color: @text-color;
+	}
+}
+.sf-navbar li:hover,
+.sf-navbar li.sfHover,
+.sf-navbar ul li.current {
+	a {
+		color: @text-color;
+	}
+	background: @brand-lighter;
+}
+.sf-navbar ul li:hover,
+.sf-navbar ul li.sfHover,
+.sf-navbar ul ul li {
+
+	a {
+		color: @text-color;
+	}
+	background: @brand-lightest;
+}
+.sf-navbar ul li.current {
+    background: white;
+}
+
+.sf-navbar ul ul li:hover,
+.sf-navbar ul ul li.sfHover,
+.sf-navbar ul ul li.current {
+	a {
+		line-height: 1.4em;
+		color: @text-color;
+	}
+	background: white;
+}
+.sf-navbar ul li.current > a {
+	font-weight: bold;
+}
+
+/*** point all arrows down ***/
+.sf-arrows.sf-navbar ul .sf-with-ul:after {
+	margin-top: -3px;
+	margin-right: 0;
+	border-color: transparent;
+	border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba(255,255,255,.5);
+}
+
+.sf-arrows.sf-navbar ul > li > .sf-with-ul:focus:after,
+.sf-arrows.sf-navbar ul > li:hover > .sf-with-ul:after,
+.sf-arrows.sf-navbar ul > .sfHover > .sf-with-ul:after {
+	border-color: transparent;
+	border-top-color: white;
+}
+

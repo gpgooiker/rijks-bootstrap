@@ -1,0 +1,146 @@
+//
+// Alerts
+// --------------------------------------------------
+
+// Base styles
+// -------------------------
+
+.alert {
+    padding: @alert-padding;
+    padding-top: (@alert-icon-height + 15px);
+    margin-bottom: 15px;
+//    margin-bottom: @line-height-computed;
+    border: 1px solid transparent;
+    border-radius: @alert-border-radius;
+
+    position: relative;
+
+
+    &:before {
+        font-family: FontAwesome;
+        font-weight: normal;
+        display: block;
+        content: "\f12a";
+        position: absolute;
+        width: 22px;
+        height: @alert-icon-height;
+        top: -1px;
+        left: 15px;
+        color: @text-color;
+        text-align: center;
+        line-height: @alert-icon-height;
+        font-size: 18px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+
+    h2, h3 {
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 1.2;
+        margin: 0 0 5px;
+        padding: 0;
+    }
+    // Provide class for links that match alerts
+    .alert-link {
+        font-weight: @alert-link-font-weight;
+    }
+
+    // Improve alignment and spacing of inner content
+    > p {
+        margin-bottom: 0;
+    }
+    > p + p {
+        margin-top: 5px;
+    }
+    > ul {
+        list-style: none;
+        font-size: 1em;
+        background: none;
+        padding-left: 0px;
+        li {
+            font-size: 1em;
+            background: none;
+            padding-left: 0px;
+            &::before {
+                content: "\2022";
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.alert-dismissible {
+    padding-right: (@alert-padding + 20);
+
+    // Adjust close link position
+    .close {
+        position: relative;
+        top: -40px;
+        right: -28px;
+        color: inherit;
+    }
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-success {
+    &:before {
+        content: "\f00c";
+        background: @brand-success;
+        color: @white;
+    }
+
+    li:before {
+        color: @brand-success;
+    }
+
+    .alert-variant(@alert-success-bg; @alert-success-border; @alert-success-text);
+}
+
+.alert-info {
+    &:before {
+        content: "\f129";
+        background: @brand-info;
+        color: @white;
+    }
+
+    li:before {
+        color: @brand-info;
+    }
+    .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
+}
+
+.alert-warning {
+    &:before {
+        background: @brand-warning;
+        color: @black;
+    }
+
+    li:before {
+        color: @brand-warning;
+    }
+    .alert-variant(@alert-warning-bg; @alert-warning-border; @alert-warning-text);
+}
+
+.alert-danger {
+    &:before {
+        background: @brand-danger;
+        color: @white;
+    }
+
+    li:before {
+        color: @brand-danger;;
+    }
+    .alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+}

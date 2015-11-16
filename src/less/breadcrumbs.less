@@ -1,0 +1,60 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+@item-arrow-width: 20px;
+@item-arrow-height: 28px;
+.breadcrumb {
+    padding: 0;
+    //  padding: 0 @breadcrumb-padding-horizontal @breadcrumb-padding-vertical;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: @breadcrumb-bg;
+    border-radius: @border-radius-base;
+
+    > li {
+        display: inline-block;
+
+
+
+        a, span {
+            height: @item-arrow-height;
+            display: inline-block;
+            .lh-transition(width .5s);
+            display: inline-block;
+            overflow: hidden;
+            color: @breadcrumb-color;
+
+            line-height: 2.5em;
+            padding-left: @item-arrow-width;
+            background: url("../images/inline.png") no-repeat 3px -244px;
+
+        }
+
+        &.breadcrumb-home-item a{
+            background: none;
+            padding-left: 0;
+        }
+    }
+
+    > .active {
+        color: @breadcrumb-active-color;
+    }
+}
+
+@media (max-width: @screen-xs)
+and (orientation : portrait) {
+
+    .breadcrumb > li.breadcrumb-inner-item {
+        a {
+            width: 35px;
+            padding-left: 35px;
+            background: url("../images/inline.png") no-repeat 12px -244px;
+
+            &:hover,
+            &:focus,
+            &:active {
+                width: auto;
+            }
+        }
+    }
+}
