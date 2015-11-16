@@ -3,5 +3,5 @@ The Rijkshuisstijl is the official style guide for apps and sites in the Dutch p
 To build the package, run:
 
 ```bash
-gulp
+npm install
 ```
