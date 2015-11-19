@@ -30,7 +30,6 @@ button.show-less,
 a.external-link {
     padding-left: 15px;
     background-position: left -169px;
-
 }
 
 [class$="-link"] img {
@@ -52,6 +51,10 @@ a.internal-link {
     background-position: right -255px;
 }
 
+a.btn {
+    text-decoration: none;
+}
+
 a.mailto-link {
     padding-left: 15px;
     background: url("@{path-sprites}icon-mail.png") no-repeat left 5px;
@@ -65,14 +68,14 @@ a.mailto-link {
         text-decoration: underline;
 
         &.meta {
-            color: @gray; //#4e4e4e;
+            color: @gray;
             text-decoration: none;
             font-size: 0.85em;
         }
 
     }
 }
-//Horizontal line in asside see
+//Horizontal line in aside
 .aside {
     hr {
         margin:0 0 10px;
@@ -231,7 +234,7 @@ button.show-more {
     height: 28px;
     margin: 0;
     padding: 0;
-    border-left: solid 5px #ffffff;
+    border-left: solid 5px white;
     cursor: not-allowed;
 
     &:first-child .left-cut {
@@ -249,7 +252,7 @@ button.show-more {
     }
 
     .left-cut {
-        border-left: 14px solid #ffffff;
+        border-left: 14px solid white;
         float: left;
     }
 
@@ -453,11 +456,11 @@ button.show-more {
 
 
 .left-inner-addon button {
-    left: 0; // (@grid-gutter-width / 2);
+    left: 0;
 }
 
 .right-inner-addon button {
-    right: 0 ;//(@grid-gutter-width / 2);
+    right: 0;
 }
 
 .right-inner-addon {

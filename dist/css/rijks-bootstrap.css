@@ -6173,9 +6173,6 @@ button.close {
     display: none !important;
   }
 }
-#main-navigation {
-  background-color: #d6d7b2;
-}
 /*** ESSENTIAL STYLES ***/
 .sf-menu,
 .sf-menu * {
@@ -6414,13 +6411,10 @@ button.close {
 body {
   overflow-y: scroll;
 }
-#page-wrapper {
+.page-wrapper {
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-#header {
-  background-color: #fff;
 }
 ul.navigation,
 ul.navigation ul {
@@ -6431,48 +6425,50 @@ ul.navigation ul {
 ul.navigation ul {
   list-style-type: none;
 }
-div#logo {
+.rijksoverheid-branding {
   height: 87px;
+  background: white;
 }
-div#logo a {
+.rijksoverheid-branding a {
   display: block;
   position: absolute;
   left: 50%;
   margin-left: -22px;
 }
-#logo-bottom {
+.logo-bottom {
   text-align: center;
   margin-top: 30px;
   line-height: 1px;
 }
-#logo-bottom:before {
+.logo-bottom:before {
   content: '';
   height: 28px;
   background: #154273;
   width: 44px;
   display: inline-block;
 }
-#app-name {
+.app-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
   background-color: #ebebd9;
-}
-#app-name > div {
   padding: 0 10px;
   overflow: hidden;
 }
-#main-navigation {
+.main-navigation {
   overflow: hidden;
+  background-color: #d6d7b2;
 }
-#content-wrapper {
+.content-wrapper {
   background-color: #fff;
   margin-bottom: 60px;
 }
-#main-container {
+main {
   min-height: 400px;
 }
-#sub-nav {
+.sub-nav {
   padding-top: 30px;
 }
-#sub-nav li a {
+.sub-nav li a {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 14px;
@@ -6489,31 +6485,31 @@ div#logo a {
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-#sub-nav li a.open {
+.sub-nav li a.open {
   background: url("../images/inline.png") no-repeat 1em -505px;
   background-color: #ebebd9;
 }
-#sub-nav li a.active,
-#sub-nav li a:hover,
-#sub-nav li a:active,
-#sub-nav li a:focus {
+.sub-nav li a.active,
+.sub-nav li a:hover,
+.sub-nav li a:active,
+.sub-nav li a:focus {
   background-color: #d6d7b2;
 }
-#sub-nav li li a {
+.sub-nav li li a {
   padding: 0 1em 0 3em;
   background: url("../images/inline.png") no-repeat 2.1em -249px;
 }
-#breadcrumbs-wrapper {
+.breadcrumbs-wrapper {
   min-height: 30px;
 }
-#nav-footer {
+.nav-footer {
   margin: 10px 20px;
   font-size: 12px;
 }
-#nav-footer li {
+.nav-footer li {
   display: inline-block;
 }
-#nav-footer li a {
+.nav-footer li a {
   text-decoration: none;
   color: #333333;
   display: block;
@@ -6521,22 +6517,15 @@ div#logo a {
   line-height: 1.2em;
   border-right: 1px solid #000;
 }
-#nav-footer li a:hover {
+.nav-footer li a:hover {
   color: #154273;
   text-decoration: underline;
 }
-#nav-footer li a.alpha {
+.nav-footer li a.alpha {
   padding-left: 0;
 }
-#nav-footer li a.omega {
+.nav-footer li a.omega {
   border: none;
-}
-.footer {
-  background: #eeeeee;
-  padding: 0;
-  position: relative;
-  overflow: auto;
-  width: 100%;
 }
 .table-placeholder-text {
   position: absolute;
@@ -6581,6 +6570,9 @@ a.internal-link {
 .btn-link.internal-link {
   padding-right: 18px;
   background-position: right -255px;
+}
+a.btn {
+  text-decoration: none;
 }
 a.mailto-link {
   padding-left: 15px;
@@ -6759,7 +6751,7 @@ button.show-more[aria-expanded="true"] {
   height: 28px;
   margin: 0;
   padding: 0;
-  border-left: solid 5px #ffffff;
+  border-left: solid 5px white;
   cursor: not-allowed;
 }
 .progressbar .item:first-child .left-cut {
@@ -6775,7 +6767,7 @@ button.show-more[aria-expanded="true"] {
   top: 0;
 }
 .progressbar .item .left-cut {
-  border-left: 14px solid #ffffff;
+  border-left: 14px solid white;
   float: left;
 }
 .progressbar .item .right-cut {
@@ -6979,7 +6971,7 @@ button.show-more[aria-expanded="true"] {
   left: 0;
 }
 .right-inner-addon button {
-  right: 0 ;
+  right: 0;
 }
 .right-inner-addon {
   position: relative;

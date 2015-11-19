@@ -12,11 +12,9 @@
 body {
     overflow-y: scroll;
 }
-#page-wrapper {
+
+.page-wrapper {
     .lh-box-shadow( 0 0 15px rgba(0,0,0, .5));
-}
-#header {
-    background-color: #fff;
 }
 
 ul.navigation,
@@ -30,9 +28,9 @@ ul.navigation ul {
     list-style-type: none;
 }
 
-div#logo {
-
+.rijksoverheid-branding {
     height: 87px;
+    background: white;
 
     a {
         display: block;
@@ -42,7 +40,7 @@ div#logo {
     }
 }
 
-#logo-bottom {
+.logo-bottom {
     text-align: center;
     margin-top: @main-top-space-height;
     line-height: 1px;
@@ -55,34 +53,31 @@ div#logo {
     }
 }
 
-#app-name {
+.app-name {
+    .text-overflow;
     background-color: @brand-lightest;
-    & > div {
-        padding: 0 (@grid-gutter-width /2 );
-        overflow: hidden;
-    }
-}
-
-
-
-#main-navigation {
+    padding: 0 (@grid-gutter-width /2 );
     overflow: hidden;
 }
 
-#content-wrapper {
+.main-navigation {
+    overflow: hidden;
+    background-color: @brand-lighter;
+}
+
+.content-wrapper {
     background-color: #fff;
     margin-bottom: (@grid-gutter-width * 3);
 }
 
-#main-container {
+main {
     min-height: 400px;
 }
 
-#sub-nav {
+.sub-nav {
     padding-top: @main-top-space-height;
 
     li {
-
         a {
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -118,11 +113,11 @@ div#logo {
     }
 }
 
-#breadcrumbs-wrapper {
+.breadcrumbs-wrapper {
     min-height: @main-top-space-height;
 }
 
-#nav-footer {
+.nav-footer {
     margin: (@grid-gutter-width /2) @grid-gutter-width;
     font-size: 12px;
 
@@ -149,14 +144,6 @@ div#logo {
             }
         }
     }
-}
-
-.footer {
-    background: @gray-lighter;
-    padding: 0;
-    position: relative;
-    overflow: auto;
-    width: 100%;
 }
 
 .table-placeholder-text {
