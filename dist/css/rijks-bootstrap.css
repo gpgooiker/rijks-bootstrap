@@ -6455,11 +6455,10 @@ ul.navigation ul {
   overflow: hidden;
   background-color: #d6d7b2;
 }
+main,
 .content-wrapper {
   background-color: #fff;
   margin-bottom: 60px;
-}
-main {
   min-height: 70vh;
 }
 .sub-nav {
