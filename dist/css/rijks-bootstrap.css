@@ -6422,9 +6422,6 @@ ul.navigation ul {
   margin: 0;
   list-style-type: none;
 }
-ul.navigation ul {
-  list-style-type: none;
-}
 .rijksoverheid-branding {
   height: 87px;
   background: white;
@@ -6463,7 +6460,7 @@ ul.navigation ul {
   margin-bottom: 60px;
 }
 main {
-  min-height: 400px;
+  min-height: 70vh;
 }
 .sub-nav {
   padding-top: 30px;
@@ -6526,16 +6523,6 @@ main {
 }
 .nav-footer li a.omega {
   border: none;
-}
-.table-placeholder-text {
-  position: absolute;
-  font-size: 2.2em;
-  color: #ddd;
-  top: 20%;
-  width: 100%;
-}
-.into-text {
-  margin-bottom: 20px;
 }
 a.back-link,
 a.external-link,
@@ -6981,9 +6968,6 @@ button.show-more[aria-expanded="true"] {
 }
 .highlight-search-text {
   background-color: yellow;
-}
-#houderKoppelingenOverzichtInputFilter::-ms-clear {
-  display: none;
 }
 .tooltip-container {
   padding-right: 10px;
