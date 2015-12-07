@@ -1,11 +1,6 @@
 /**
  * Styling for the Rijkshuisstijl
  */
-//
-// Load core variables and mixins
-// --------------------------------------------------
-@import "variables.less";
-@import "mixins.less";
 
 @main-top-space-height: 30px;
 
@@ -137,4 +132,17 @@ main, .content-wrapper {
             }
         }
     }
+}
+
+
+// Vertically center boxes on the screen
+.vertically-center-container {
+  display: table;
+  width: 100%;
+  min-height: 70vh;
+  
+  .vertically-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }

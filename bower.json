@@ -16,7 +16,8 @@
   "homepage": "https://www.rijkshuisstijl.nl/",
   "private": false,
   "dependencies": {
-      "superfish": "~1.7.5"
+    "superfish": "~1.7.5",
+    "bootstrap": "~3.3.6"
   },
   "ignore": [
     "**/.*",

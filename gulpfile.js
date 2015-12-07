@@ -1,10 +1,16 @@
 // Include gulp and gulp plugins
-var gulp = require('gulp');
-var less = require('gulp-less');
-var path = require('path');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+var gulp = require('gulp'),
+  less = require('gulp-less'),
+  path = require('path'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  rename = require('gulp-rename');
+
+var fonts = {
+  glyphicon: [
+    './bower_components/bootstrap/fonts/*.*'
+  ]
+};
 
 // Compile LESS
 gulp.task('less', function () {
@@ -31,4 +37,10 @@ gulp.task('watch', function () {
   gulp.watch('src/less/*.less', ['less']);
 });
 
-gulp.task('default', ['less', 'js']);
+// Move fonts to dist
+gulp.task('move-fonts', function () {
+  gulp.src(fonts.glyphicon, { base: './bower_components/bootstrap/fonts' })
+    .pipe(gulp.dest('./dist/fonts/glyphicons'));
+});
+
+gulp.task('default', ['less', 'js', 'move-fonts', 'watch']);
