@@ -28,12 +28,12 @@
     <div class="page-wrapper">
       <header>
         <div class="rijksoverheid-branding">
-          <a href="./" title="Ga naar homepagina">
+          <a href="./" title="Home">
             <img src="dist/images/logoRijksoverheidHeader.png" alt="logo Rijksoverheid" />
           </a>
         </div>
         <div class="app-name">
-          <strong>Rijks-bootstrap</strong> Bootstrap in de Rijkshuisstijl
+          <strong>Rijks-bootstrap</strong> Bootstrap, using the styleguide for the Dutch public sector
         </div>
         <nav class="main-navigation">
           <ul class="sf-menu sf-navbar">
@@ -42,18 +42,10 @@
             <li>
               <a href="rapport.html">Sample menu with Superfish</a>
               <ul>
-                <li>
-                  <a href="#">submenu item</a>
-                </li>
-                <li>
-                  <a href="#">long submenu item sets sub width</a>
-                </li>
-                <li>
-                  <a href="#">submenu item</a>
-                </li>
-                <li>
-                  <a href="#">submenu item</a>
-                </li>
+                <li> <a href="#">submenu item</a> </li>
+                <li> <a href="#">long submenu item sets sub width</a> </li>
+                <li> <a href="#">submenu item</a> </li>
+                <li> <a href="#">submenu item</a> </li>
               </ul>
             </li>
           </ul>
@@ -63,74 +55,104 @@
       <main>
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
-            <h1>UI elementen</h1>
-
+            <h1>UI Elements</h1>
+            <h2>Forms</h2>
             <div class="into-text">
-              Op deze pagina kunt u zoeken naar items
+              A sample form
             </div>
             <form>
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="kvknr" class="control-label">KvK Nummer</label>
-                  <input type="text" class="form-control" id="kvknr" placeholder="bijv. 12345678">
+                  <label for="number" class="control-label">Number</label>
+                  <input type="text" class="form-control" id="number" placeholder="12 34 56">
                 </div>
 
                 <div class="form-group  col-md-6">
-                  <label for="bedrijf" class="control-label">Naam geïnspecteerde</label>
-                  <input type="text" class="form-control" id="bedrijf" placeholder="bijv. Mijn bedrijf bv">
+                  <label for="company" class="control-label">Name</label>
+                  <input type="text" class="form-control" id="company" placeholder="My Company">
                 </div>
               </div>
 
               <div class="row">
                 <div class="form-group col-md-12">
-                  <label for="sbicode" class="control-label">Sbi-code</label>
-                  <input type="text" class="form-control" id="sbicode" placeholder="Sbi-code">
+                  <label for="sbcode" class="control-label">Sb-code</label>
+                  <input type="text" class="form-control" id="sbcode" placeholder="345 678">
                 </div>
               </div>
 
 
               <div class="row">
                 <div class="form-group  col-md-4">
-                  <label for="plaats" class="control-label">Plaats</label>
-                  <input type="text" class="form-control" id="plaats" placeholder="bijv. Amsterdam">
+                  <label for="city" class="control-label">City</label>
+                  <input type="text" class="form-control" id="city" placeholder="Amsterdam">
                 </div>
 
                 <div class="form-group col-md-4">
-                  <label for="postcode" class="control-label">Postcode</label>
-                  <input type="text" class="form-control" id="postcode" placeholder="bijv. 1103AA">
+                  <label for="postalcode" class="control-label">Postal code</label>
+                  <input type="text" class="form-control" id="postalcode" placeholder="1103AA">
                 </div>
 
                 <div class="form-group  col-md-4">
-                  <label for="provincie" class="control-label">Provincie</label>
-                  <input type="text" class="form-control" id="provincie" placeholder="bijv. Zuid Holland">
+                  <label for="province" class="control-label">Provincie</label>
+                  <input type="text" class="form-control" id="province" placeholder="Noord Holland">
                 </div>
               </div>
 
 
               <div class="form-group">
-                <button id="zoek" class="btn btn-primary">Zoeken</button>
+                <button id="search-button" class="btn btn-primary">Search</button>
               </div>
-
             </form>
 
-            <div class="alert alert-warning">
-              <h2>Lorem ipsum alert.</h2>
-              <p>U moet ingeschreven staan in dit register om te mogen werken .</p>
+            <h2>Alerts</h2>
+            <div class="alert alert-warning" role="alert">
+              <h2>A warning alert</h2>
+              <p>Everything is okay, just be sure to check something first.</p>
             </div>
 
-            <div class="alert alert-success">
-              <h2>Lorem ipsum alert.</h2>
-              <p>U moet ingeschreven staan in dit register om te mogen werken .</p>
+            <div class="alert alert-success" role="alert">
+              <h2>Succes!</h2>
+              <p>Everything works.</p>
             </div>
-            <div class="alert alert-info">
-              <h2>Lorem ipsum alert.</h2>
-              <p>U moet ingeschreven staan in dit register om te mogen werken .</p>
+            <div class="alert alert-info" role="alert">
+              <h2>Info alert</h2>
+              <p>Check this information out, but it's not super important.</p>
             </div>
 
-            <div class="alert alert-danger">
+            <div class="alert alert-danger" role="alert">
               <h2>Lorem ipsum alert.</h2>
-              <p>U moet ingeschreven staan in dit register om te mogen werken .</p>
+              <p>Use the full red color for the exclamation icon. The body of the warning should be in the lighter shade of
+                red. <a href="https://www.rijkshuisstijl.nl/huisstijldragers/online-formulieren" target="_blank">Source</a></p>
             </div>
+
+            <h2>Tables</h2>
+            <table id="inspectie-tabel" class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>City</th>
+                  <th>Date</th>
+                  <th>Location</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr role="row" tabindex="0">
+                  <td>Cleaning company Ozlem</td>
+                  <td>Amsterdam</td>
+                  <td>03-01-2015</td>
+                  <td>Amsterdam</td>
+                  <td>It just works. </td>
+                </tr>
+                <tr role="row" tabindex="0">
+                  <td>Jansen ruimt op</td>
+                  <td>Rotterdam</td>
+                  <td>09-03-2015</td>
+                  <td>Rotterdam</td>
+                  <td>Add .table-condensed to &lt;table&gt; for a cosy padding</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </main>
@@ -145,7 +167,7 @@
         <li><a href="#" class="alpha">Contact</a></li>
         <li><a href="#">Help</a></li>
         <li><a href="#">Sitemap</a></li>
-        <li><a href="#" class="omega">Voorwaarden</a></li>
+        <li><a href="#" class="omega">Terms and conditions</a></li>
       </ul>
     </nav>
   </footer>
