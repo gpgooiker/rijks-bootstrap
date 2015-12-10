@@ -16,7 +16,7 @@
     "styling",
     "bootstrap"
   ],
-  "license": "MIT",
+  "license": "CC0-1.0",
   "homepage": "https://www.rijkshuisstijl.nl/",
   "private": false,
   "dependencies": {

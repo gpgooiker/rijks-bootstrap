@@ -2464,7 +2464,6 @@ legend {
 }
 label {
   display: inline-block;
-  max-width: 100%;
   margin-bottom: 5px;
 }
 input[type="search"] {
@@ -2555,7 +2554,6 @@ input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
   line-height: 43px;
-  line-height: 1.8 \0;
 }
 input[type="date"].input-sm,
 input[type="time"].input-sm,
@@ -3449,7 +3447,6 @@ tbody.collapse.in {
   font-size: 16px;
   text-align: left;
   background-color: #fff;
-  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);

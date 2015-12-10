@@ -34,7 +34,6 @@ legend {
     width: 100%;
     padding: 0;
     margin-bottom: 15px;
-//    margin-bottom: @line-height-computed;
     font-size: (@font-size-base * 1.3);
     line-height: inherit;
     color: @legend-color;
@@ -44,7 +43,6 @@ legend {
 
 label {
     display: inline-block;
-    max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
     margin-bottom: 5px;
 }
 
@@ -188,8 +186,6 @@ input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
     line-height: @input-height-base;
-    // IE8+ misaligns the text within date inputs, so we reset
-    line-height: @line-height-base ~"\0";
 
     &.input-sm {
         line-height: @input-height-small;

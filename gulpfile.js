@@ -4,15 +4,26 @@ var gulp = require('gulp'),
   path = require('path'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
+  ugilifyCss = require('gulp-uglifycss'),
   rename = require('gulp-rename');
 
-var fonts = {
-  glyphicon: [
-    './bower_components/bootstrap/fonts/*.*'
+var bootstrapDist = './bower_components/bootstrap/dist/',
+  hoverIntentDist = './bower_components/superfish/dist/';
+
+var paths = {
+  fonts: {
+    glyphicon: bootstrapDist + 'fonts/*.*'
+  },
+  js: [
+    './bower_components/jquery/dist/jquery.min.js',
+    hoverIntentDist + 'js/hoverIntent.js',
+    hoverIntentDist + 'js/superfish.min.js',
+    bootstrapDist + 'js/bootstrap.min.js',
+    'src/js/initializeHoverIntent.js'
   ]
 };
 
-// Compile LESS
+// Compile LESS to css and provide a minified version
 gulp.task('less', function () {
   gulp.src('src/less/rijks-bootstrap.less')
     .pipe(less({
@@ -21,13 +32,13 @@ gulp.task('less', function () {
     .pipe(rename('rijks-bootstrap.css'))
     .pipe(gulp.dest('dist/css'))
     .pipe(rename('rijks-bootstrap.min.css'))
-    .pipe(uglify())
+    .pipe(ugilifyCss())
     .pipe(gulp.dest('dist/css'));
 });
 
 // Concatenate & minify Javascript
 gulp.task('js', function () {
-  return gulp.src('src/js/*.js')
+  return gulp.src(paths.js)
     .pipe(concat('rijks-bootstrap.js'))
     .pipe(gulp.dest('dist/js'))
     .pipe(rename('rijks-bootstrap.min.js'))
@@ -42,7 +53,7 @@ gulp.task('watch', function () {
 
 // Move fonts to dist
 gulp.task('move-fonts', function () {
-  gulp.src(fonts.glyphicon, { base: './bower_components/bootstrap/fonts' })
+  gulp.src(paths.fonts.glyphicon, { base: bootstrapDist + 'fonts' })
     .pipe(gulp.dest('./dist/fonts/glyphicons'));
 });
 
