@@ -3,7 +3,7 @@ The Rijkshuisstijl is the official style guide for apps and sites in the Dutch p
 
 ## Using Rijks-Bootstrap
 
-Include the stylesheets, fonts, images and javascript libraries in dist/. For an example, check sample-login.html and sample-ui-elements.html.
+Include the stylesheets, fonts, images and javascript libraries in dist/. Then, build your site or application like you would with Bootstrap. For an example, check sample-login.html and sample-ui-elements.html.
 
 ## Building
 
