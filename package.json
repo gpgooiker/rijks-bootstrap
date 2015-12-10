@@ -10,7 +10,7 @@
     "postinstall": "bower install && gulp"
   },
   "author": "ICTU",
-  "license": "CC0",
+  "license": "Styling: CC0. Logo and fonts: copyright",
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",

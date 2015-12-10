@@ -1,0 +1,26 @@
+// Use .table-with-background to render a table where the table cells have
+// a background color, divided by some whitespace
+
+.table.table-with-background, .table.table-with-background.table-bordered {
+	> thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > td {
+				background-color: transparent;
+				border-top: 2*@padding-xs-vertical solid white;
+			}
+		}
+	}
+	> thead > tr > th {
+		background-color: @brand-primary;
+		color: white;
+		border-bottom: 3*@padding-xs-vertical solid white;
+  }
+	> tbody > tr {
+		background-color: @brand-lightest;
+		&:hover {
+			background-color: darken(@brand-lightest, 5%);
+		}
+	}
+}

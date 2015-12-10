@@ -2,12 +2,8 @@
 // Variables for Rijks-bootstrap
 // --------------------------------------------------
 
-
 //== Colors
 //
-
-@white:                 white;
-@black:                 black;
 
 //## Gray and brand colors for use across Bootstrap.
 
@@ -16,17 +12,13 @@
 @gray:                   lighten(#000, 33.5%); // #555
 @gray-light:             lighten(#000, 46.7%); // #777
 @gray-lighter:           lighten(#000, 93.5%); // #eee
-@gray-lightest:           lighten(#000, 96%); // #f5f5f5
-
-
-@rhs-kleur: 'mos-groen';
+@gray-lightest:          lighten(#000, 96%); // #f5f5f5
 
 //paars
-//------------------------------------------------- 
+//-------------------------------------------------
 //@brand-primary:                 #42145f;
 //@brand-lighter:                 #c6b8cf;
 //@brand-lightest:                #e3dce7;
-
 
 //donker blauw
 //-------------------------------------------------
@@ -34,13 +26,11 @@
 //@brand-lighter:                 #cce0f1;
 //@brand-lightest:                #e5f0f9;
 
-
 //hemelsblauw
 //-------------------------------------------------
 //@brand-primary:                 #007bc7;
 //@brand-lighter:                 #b2d7ee;
 //@brand-lightest:                #d9ebf7;
-
 
 //licht-blauw
 //-------------------------------------------------
@@ -48,27 +38,23 @@
 //@brand-lighter:                 #ddeff8;
 //@brand-lightest:                #eef7fb;
 
-
 //Violet
 //-------------------------------------------------
 //@brand-primary:                 #a90061;
 //@brand-lighter:                 #e5b2cf;
 //@brand-lightest:                #f2d9e7;
 
-
 //robijn-rood
 //-------------------------------------------------
-//@brand-primary:                         #ca005d;
-//@brand-lighter:                         #efb2ce;
-//@brand-lightest:                        #f7d9e7;
-
+//@brand-primary:                 #ca005d;
+//@brand-lighter:                 #efb2ce;
+//@brand-lightest:                #f7d9e7;
 
 //groen
 //-------------------------------------------------
-//@brand-primary:                 #39870c;
-//@brand-lighter:                 #c3dbb6;
-//@brand-lightest:                #e1eddb;
-
+@brand-primary:                 #39870c;
+@brand-lighter:                 #c3dbb6;
+@brand-lightest:                #e1eddb;
 
 //donker-groen
 //-------------------------------------------------
@@ -76,21 +62,17 @@
 //@brand-lighter:                 #becdc3;
 //@brand-lightest:                #dfe6e1;
 
-
 //mos-groen
 //-------------------------------------------------
-@brand-primary: #777c00;
-@brand-lighter: #d6d7b2;
-@brand-lightest: #ebebd9;
-
+// @brand-primary:                #777c00;
+// @brand-lighter:                #d6d7b2;
+// @brand-lightest:               #ebebd9;
 
 //mint-groen
 //-------------------------------------------------
-// @brand-primary:                 #76d2b6;
-// @brand-lighter:                 #d6f1e9;
-// @brand-lightest:                #ebf8f4;
-
-
+// @brand-primary:                #76d2b6;
+// @brand-lighter:                #d6f1e9;
+// @brand-lightest:               #ebf8f4;
 
 //donker-bruin
 //-------------------------------------------------
@@ -98,13 +80,11 @@
 //@brand-lighter:                 #d1c1be;
 //@brand-lightest:                #e8e1df;
 
-
 //bruin
 //-------------------------------------------------
 //@brand-primary:                 #94710a;
 //@brand-lighter:                 #dfd4b5;
 //@brand-lightest:                #efeada;
-
 
 //geel
 //-------------------------------------------------
@@ -112,13 +92,11 @@
 //@brand-lighter:                 #dfd4b5;
 //@brand-lightest:                #efeada;
 
-
-//donker-geel
+//donkergeel
 //-------------------------------------------------
 //@brand-primary:                 #ffb612;
 //@brand-lighter:                 #ffe9b7;
 //@brand-lightest:                #fff4dc;
-
 
 //oranje
 //-------------------------------------------------
@@ -126,22 +104,11 @@
 //@brand-lighter:                 #f6d4b2;
 //@brand-lightest:                #fbead9;
 
-
 //roze
 //-------------------------------------------------
 //@brand-primary:                 #f092cd;
 //@brand-lighter:                 #fadef0;
 //@brand-lightest:                #fdeff8;
-
-@achtergrond: #f3f3f3;
-@achtergrond-links: #535353;
-@grijs1: #e6e6e6;
-@grijs2: #ccc;
-@grijs3: #b4b4b4;
-@grijs4: #999;
-
-//=========================================================================
-//=========================================================================
 
 //State Colors
 //-------------------------------------------------
@@ -167,7 +134,7 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               @achtergrond;
+@body-bg:               #f3f3f3;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
 
@@ -194,7 +161,6 @@
 @line-height-base:        1.8; // ~23px
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    ceil((@font-size-base * @line-height-base)); // ~20px
-
 
 @font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.3)); // ~18px
@@ -295,9 +261,9 @@
 //** Default background color used for all tables.
 @table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-@table-bg-accent:               #ebebeb; //#f9f9f9;
+@table-bg-accent:               @gray-lightest;
 //** Background color used for `.table-hover`.
-@table-bg-hover:                @well-bg; //#f5f5f5;
+@table-bg-hover:                @brand-lightest;
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
@@ -342,7 +308,7 @@
 //##
 
 
-@input-border-width:                   1px;
+@input-border-width:             1px;
 
 //** `<input>` background color
 @input-bg:                       #fff;
@@ -407,7 +373,7 @@
 //** Hover background for dropdown links.
 @dropdown-link-hover-bg:         #f5f5f5;
 //** Link hover decoration.
-@link-hover-decoration: underline;
+@link-hover-decoration:          underline;
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;
@@ -1039,4 +1005,4 @@
 @progress-default-bg: @gray-lighter;
 @progress-visited-bg: lighten(@brand-warning-lighter,3%);
 @progress-active-bg: @brand-warning;
-@progress-cut-color: @white;
+@progress-cut-color: white;
