@@ -15,10 +15,10 @@ var paths = {
     glyphicon: bootstrapDist + 'fonts/*.*'
   },
   js: [
-    './bower_components/jquery/dist/jquery.min.js',
+    './bower_components/jquery/dist/jquery.js',
     hoverIntentDist + 'js/hoverIntent.js',
-    hoverIntentDist + 'js/superfish.min.js',
-    bootstrapDist + 'js/bootstrap.min.js',
+    hoverIntentDist + 'js/superfish.js',
+    bootstrapDist + 'js/bootstrap.js',
     'src/js/initializeHoverIntent.js'
   ]
 };
