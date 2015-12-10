@@ -19,6 +19,9 @@ gulp.task('less', function () {
       paths: [path.join(__dirname, 'less', 'includes')]
     }))
     .pipe(rename('rijks-bootstrap.css'))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(rename('rijks-bootstrap.min.css'))
+    .pipe(uglify())
     .pipe(gulp.dest('dist/css'));
 });
 
