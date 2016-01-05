@@ -3,7 +3,7 @@
   "authors": [
     "ICTU"
   ],
-  "description": "The Rijkshuisstijl (Country house style) is the official style guide for apps and sites in the Dutch public sector. In this package, Bootstrap is adapted to the style guide.",
+  "description": "The Rijkshuisstijl (National house style) is the official style guide for apps and sites in the Dutch public sector. In this package, Bootstrap is adapted to the style guide.",
   "main": [
     "src/less/rijks-bootstrap.less",
     "dist/js/rijks-bootstrap.min.js",
