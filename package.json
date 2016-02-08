@@ -1,6 +1,6 @@
 {
   "name": "rijks-bootstrap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tools to build the Rijks-bootstrap package.",
   "repository": {
     "type": "git",
