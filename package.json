@@ -1,17 +1,19 @@
 {
   "name": "rijks-bootstrap",
-  "version": "0.0.1",
-  "description": "Tools to build the Rijks-bootstrap bower package.",
+  "version": "0.0.2",
+  "description": "Tools to build the Rijks-bootstrap package.",
   "repository": {
     "type": "git",
     "url": "https://github.com/gpgooiker/rijks-bootstrap.git"
   },
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "bower install && gulp"
   },
   "author": "ICTU",
   "license": "CC0-1.0",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-less": "^3.0.5",
