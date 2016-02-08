@@ -58,3 +58,4 @@ gulp.task('move-fonts', function () {
 });
 
 gulp.task('default', ['less', 'js', 'move-fonts', 'watch']);
+gulp.task('build', ['less', 'js', 'move-fonts']);
