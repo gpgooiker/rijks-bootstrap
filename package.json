@@ -13,7 +13,7 @@
   },
   "author": "ICTU",
   "license": "CC0-1.0",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-less": "^3.0.5",
