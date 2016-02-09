@@ -1,7 +1,7 @@
 {
   "name": "rijks-bootstrap",
   "version": "0.0.6",
-  "description": "Tools to build the Rijks-bootstrap package.",
+  "description": "Tools to build the Rijks-bootstrap visual identity.",
   "repository": {
     "type": "git",
     "url": "https://github.com/gpgooiker/rijks-bootstrap.git"
