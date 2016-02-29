@@ -7,15 +7,15 @@ var gulp = require('gulp'),
   ugilifyCss = require('gulp-uglifycss'),
   rename = require('gulp-rename');
 
-var bootstrapDist = './bower_components/bootstrap/dist/',
-  hoverIntentDist = './bower_components/superfish/dist/';
+var bootstrapDist = './node_modules/bootstrap/dist/',
+  hoverIntentDist = './node_modules/superfish/dist/';
 
 var paths = {
   fonts: {
     glyphicon: bootstrapDist + 'fonts/*.*'
   },
   js: [
-    './bower_components/jquery/dist/jquery.js',
+    './node_modules/jquery/dist/jquery.js',
     hoverIntentDist + 'js/hoverIntent.js',
     hoverIntentDist + 'js/superfish.js',
     bootstrapDist + 'js/bootstrap.js',

@@ -1,7 +1,7 @@
 {
   "name": "rijks-bootstrap",
-  "version": "0.0.6",
-  "description": "Tools to build the Rijks-bootstrap visual identity.",
+  "version": "0.0.7",
+  "description": "The Rijkshuisstijl (National visual identity) is the official style guide for apps and sites in the Dutch public sector. In this package, Bootstrap is adapted to the style guide.",
   "repository": {
     "type": "git",
     "url": "https://github.com/gpgooiker/rijks-bootstrap.git"
@@ -9,17 +9,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "bower install && gulp build"
+    "build": "bower install && npm install && gulp build"
   },
-  "author": "ICTU",
+  "author": "GP Gooiker",
   "license": "CC0-1.0",
   "dependencies": {
-    "gulp": "^3.9.0",
+    "bootstrap": "^3.3.6",
+    "superfish": "^1.7.8"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-less": "^3.0.5",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.1",
-    "gulp-uglifycss": "^1.0.5",
+    "gulp-uglify": "^1.5.3",
+    "gulp-uglifycss": "^1.0.6",
     "path": "^0.12.7"
   }
 }

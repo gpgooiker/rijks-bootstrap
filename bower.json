@@ -1,7 +1,7 @@
 {
   "name": "rijks-bootstrap",
   "authors": [
-    "ICTU"
+    "GP Gooiker"
   ],
   "description": "The Rijkshuisstijl (National visual identity) is the official style guide for apps and sites in the Dutch public sector. In this package, Bootstrap is adapted to the style guide.",
   "main": [
