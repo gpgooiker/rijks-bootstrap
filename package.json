@@ -1,6 +1,6 @@
 {
   "name": "rijks-bootstrap",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "The Rijkshuisstijl (National visual identity) is the official style guide for apps and sites in the Dutch public sector. In this package, Bootstrap is adapted to the style guide.",
   "repository": {
     "type": "git",
