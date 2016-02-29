@@ -1,3 +1,10 @@
 .DS_Store
-bower_components/
-node_modules/
+
+# Exclude bower_components and node_modules, but allow people to include the source of Bootstrap
+/bower_components/*
+!/bower_components/bootstrap/
+!/bower_components/bootstrap/*
+
+/node_modules/*
+!node_modules/bootstrap/
+!node_modules/bootstrap/*
