@@ -12,7 +12,7 @@ var bootstrapDist = './node_modules/bootstrap/dist/',
 
 var paths = {
   fonts: {
-    glyphicon: bootstrapDist + 'fonts/*.*'
+    glyphicon: bootstrapDist + 'fonts/*.woff'
   },
   js: [
     './node_modules/jquery/dist/jquery.js',
@@ -24,7 +24,7 @@ var paths = {
 };
 
 // Compile LESS to css and provide a minified version
-gulp.task('less', function () {
+gulp.task('less', function() {
   gulp.src('src/less/rijks-bootstrap.less')
     .pipe(less({
       paths: [path.join(__dirname, 'less', 'includes')]
@@ -37,7 +37,7 @@ gulp.task('less', function () {
 });
 
 // Concatenate & minify Javascript
-gulp.task('js', function () {
+gulp.task('js', function() {
   return gulp.src(paths.js)
     .pipe(concat('rijks-bootstrap.js'))
     .pipe(gulp.dest('dist/js'))
@@ -47,12 +47,12 @@ gulp.task('js', function () {
 });
 
 // Watch LESS files for changes
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   gulp.watch('src/less/*.less', ['less']);
 });
 
 // Move fonts to dist
-gulp.task('move-fonts', function () {
+gulp.task('move-fonts', function() {
   gulp.src(paths.fonts.glyphicon, { base: bootstrapDist + 'fonts' })
     .pipe(gulp.dest('./dist/fonts/glyphicons'));
 });
