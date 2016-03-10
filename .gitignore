@@ -8,3 +8,5 @@
 /node_modules/*
 !node_modules/bootstrap/
 !node_modules/bootstrap/*
+
+npm-debug.log

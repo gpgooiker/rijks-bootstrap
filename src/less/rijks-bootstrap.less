@@ -1,71 +1,67 @@
-@bootstrap-source-path: "../../bower_components/bootstrap/less/";
+// Rijks-bootstrap overrides some of the less files of Bootstrap. The others are
+// imported from the source files of Bootstrap.
 
-// To modify Bootstrap, we use the less files in the current directory instead of
-// the Boostrap core files with the same file name. The Bootstrap less files we didn't
-// alter are imported from the original Bootstrap core files in 
-// <project root>/bower_components/.
-
-// To upgrade Bootstrap to 3.x, just update the core files with Bower.
+// To upgrade Bootstrap to 3.x, update the source Bootstrap files with Bower of npm.
 
 // Core variables and mixins
 @import "variables.less";
-@import "mixins.less";
+@import "@{rijksbootstrap-source}mixins.less";
 
 // Include LessHat, a library of LESS mixins
-@import "vendor/lesshat-prefixed.less";
+@import "@{rijksbootstrap-source}vendor/lesshat-prefixed.less";
 
 // Reset and dependencies
-@import "@{bootstrap-source-path}normalize.less";
-@import "@{bootstrap-source-path}print.less";
-@import "@{bootstrap-source-path}glyphicons.less";
+@import "@{bootstrap-source}normalize.less";
+@import "@{bootstrap-source}print.less";
+@import "@{bootstrap-source}glyphicons.less";
 
 // Core CSS
-@import "@{bootstrap-source-path}scaffolding.less";
-@import "type.less";
+@import "@{bootstrap-source}scaffolding.less";
+@import "@{rijksbootstrap-source}type.less";
 //@import "code.less";
-@import "@{bootstrap-source-path}grid.less";
-@import "@{bootstrap-source-path}tables.less";
-@import "forms.less";
-@import "buttons.less";
+@import "@{bootstrap-source}grid.less";
+@import "@{bootstrap-source}tables.less";
+@import "@{rijksbootstrap-source}forms.less";
+@import "@{rijksbootstrap-source}buttons.less";
 
 // Components
-@import "@{bootstrap-source-path}component-animations.less";
-@import "dropdowns.less";
-@import "button-groups.less";
-@import "@{bootstrap-source-path}input-groups.less";
-@import "@{bootstrap-source-path}navs.less";
-@import "@{bootstrap-source-path}navbar.less";
-@import "breadcrumbs.less";
-@import "@{bootstrap-source-path}pagination.less";
-@import "@{bootstrap-source-path}pager.less";
-@import "@{bootstrap-source-path}labels.less";
-@import "@{bootstrap-source-path}badges.less";
+@import "@{bootstrap-source}component-animations.less";
+@import "@{rijksbootstrap-source}dropdowns.less";
+@import "@{rijksbootstrap-source}button-groups.less";
+@import "@{bootstrap-source}input-groups.less";
+@import "@{bootstrap-source}navs.less";
+@import "@{bootstrap-source}navbar.less";
+@import "@{rijksbootstrap-source}breadcrumbs.less";
+@import "@{bootstrap-source}pagination.less";
+@import "@{bootstrap-source}pager.less";
+@import "@{bootstrap-source}labels.less";
+@import "@{bootstrap-source}badges.less";
 //@import "jumbotron.less";
-@import "@{bootstrap-source-path}thumbnails.less";
-@import "alerts.less";
-@import "@{bootstrap-source-path}progress-bars.less";
-@import "@{bootstrap-source-path}media.less";
-@import "@{bootstrap-source-path}list-group.less";
-@import "panels.less";
-@import "@{bootstrap-source-path}responsive-embed.less";
-@import "wells.less";
-@import "@{bootstrap-source-path}close.less";
+@import "@{bootstrap-source}thumbnails.less";
+@import "@{rijksbootstrap-source}alerts.less";
+@import "@{bootstrap-source}progress-bars.less";
+@import "@{bootstrap-source}media.less";
+@import "@{bootstrap-source}list-group.less";
+@import "@{rijksbootstrap-source}panels.less";
+@import "@{bootstrap-source}responsive-embed.less";
+@import "@{rijksbootstrap-source}wells.less";
+@import "@{bootstrap-source}close.less";
 
 //// Components w/ JavaScript
-@import "@{bootstrap-source-path}modals.less";
-@import "@{bootstrap-source-path}tooltip.less";
-@import "@{bootstrap-source-path}popovers.less";
+@import "@{bootstrap-source}modals.less";
+@import "@{bootstrap-source}tooltip.less";
+@import "@{bootstrap-source}popovers.less";
 //@import "carousel.less";
-//
-//// Utility classes
-@import "@{bootstrap-source-path}utilities.less";
-@import "@{bootstrap-source-path}responsive-utilities.less";
 
-// Superfish is a jQuery plugin that improves hovers: menus only 
-// show when people intend to point to them
-@import "vendor/superfish.less";
+//// Utility classes
+@import "@{bootstrap-source}utilities.less";
+@import "@{bootstrap-source}responsive-utilities.less";
+
+// Superfish is a jQuery plugin that improves hovers. With Superfish, menus
+// only show when people *intend* to point to them
+@import "@{rijksbootstrap-source}vendor/superfish.less";
 
 // Custom styling for the Rijkshuisstijl
-@import "rijkshuisstijl.less";
-@import "table-with-background.less";
-@import "links.less";
+@import "@{rijksbootstrap-source}rijkshuisstijl.less";
+@import "@{rijksbootstrap-source}table-with-background.less";
+@import "@{rijksbootstrap-source}links.less";

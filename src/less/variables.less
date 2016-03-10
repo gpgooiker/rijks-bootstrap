@@ -2,9 +2,12 @@
 // Variables for Rijks-bootstrap
 // --------------------------------------------------
 
+// Paths to build LESS
+@bootstrap-source: "../../bower_components/bootstrap/less/";
+@rijksbootstrap-source: "./";
+
 //== Colors
 //
-
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-darker:            lighten(#000, 13.5%); // #222
@@ -14,104 +17,87 @@
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 @gray-lightest:          lighten(#000, 96%); // #f5f5f5
 
-//paars
-//-------------------------------------------------
-//@brand-primary:                 #42145f;
-//@brand-lighter:                 #c6b8cf;
-//@brand-lightest:                #e3dce7;
+// Paars
+// @brand-primary:                 #42145f;
+// @brand-lighter:                 #c6b8cf;
+// @brand-lightest:                #e3dce7;
 
-//donker blauw
-//-------------------------------------------------
-//@brand-primary:                 #01689b;
-//@brand-lighter:                 #cce0f1;
-//@brand-lightest:                #e5f0f9;
+// Donkerblauw
+// @brand-primary:                 #01689b;
+// @brand-lighter:                 #cce0f1;
+// @brand-lightest:                #e5f0f9;
 
-//hemelsblauw
-//-------------------------------------------------
-//@brand-primary:                 #007bc7;
-//@brand-lighter:                 #b2d7ee;
-//@brand-lightest:                #d9ebf7;
+// Hemelsblauw
+// @brand-primary:                 #007bc7;
+// @brand-lighter:                 #b2d7ee;
+// @brand-lightest:                #d9ebf7;
 
-//licht-blauw
-//-------------------------------------------------
-//@brand-primary:                 #8fcae7;
-//@brand-lighter:                 #ddeff8;
-//@brand-lightest:                #eef7fb;
+// Lichtblauw
+// @brand-primary:                 #8fcae7;
+// @brand-lighter:                 #ddeff8;
+// @brand-lightest:                #eef7fb;
 
-//Violet
-//-------------------------------------------------
-//@brand-primary:                 #a90061;
-//@brand-lighter:                 #e5b2cf;
-//@brand-lightest:                #f2d9e7;
+// Violet
+// @brand-primary:                 #a90061;
+// @brand-lighter:                 #e5b2cf;
+// @brand-lightest:                #f2d9e7;
 
-//robijn-rood
-//-------------------------------------------------
-//@brand-primary:                 #ca005d;
-//@brand-lighter:                 #efb2ce;
-//@brand-lightest:                #f7d9e7;
+// Robijnrood
+// @brand-primary:                 #ca005d;
+// @brand-lighter:                 #efb2ce;
+// @brand-lightest:                #f7d9e7;
 
-//groen
-//-------------------------------------------------
+// Groen
 @brand-primary:                 #39870c;
 @brand-lighter:                 #c3dbb6;
 @brand-lightest:                #e1eddb;
 
-//donker-groen
-//-------------------------------------------------
-//@brand-primary:                 #275937;
-//@brand-lighter:                 #becdc3;
-//@brand-lightest:                #dfe6e1;
+// Donkergroen
+// @brand-primary:                 #275937;
+// @brand-lighter:                 #becdc3;
+// @brand-lightest:                #dfe6e1;
 
-//mos-groen
-//-------------------------------------------------
+// Mosgroen
 // @brand-primary:                #777c00;
 // @brand-lighter:                #d6d7b2;
 // @brand-lightest:               #ebebd9;
 
-//mint-groen
-//-------------------------------------------------
+// Mintgroen
 // @brand-primary:                #76d2b6;
 // @brand-lighter:                #d6f1e9;
 // @brand-lightest:               #ebf8f4;
 
-//donker-bruin
-//-------------------------------------------------
-//@brand-primary:                 #673327;
-//@brand-lighter:                 #d1c1be;
-//@brand-lightest:                #e8e1df;
+// Donkerbruin
+// @brand-primary:                 #673327;
+// @brand-lighter:                 #d1c1be;
+// @brand-lightest:                #e8e1df;
 
-//bruin
-//-------------------------------------------------
-//@brand-primary:                 #94710a;
-//@brand-lighter:                 #dfd4b5;
-//@brand-lightest:                #efeada;
+// Bruin
+// @brand-primary:                 #94710a;
+// @brand-lighter:                 #dfd4b5;
+// @brand-lightest:                #efeada;
 
-//geel
-//-------------------------------------------------
-//@brand-primary:                 #f9e11e;
-//@brand-lighter:                 #dfd4b5;
-//@brand-lightest:                #efeada;
+// Geel
+// @brand-primary:                 #f9e11e;
+// @brand-lighter:                 #dfd4b5;
+// @brand-lightest:                #efeada;
 
-//donkergeel
-//-------------------------------------------------
-//@brand-primary:                 #ffb612;
-//@brand-lighter:                 #ffe9b7;
-//@brand-lightest:                #fff4dc;
+// Donkergeel
+// @brand-primary:                 #ffb612;
+// @brand-lighter:                 #ffe9b7;
+// @brand-lightest:                #fff4dc;
 
-//oranje
-//-------------------------------------------------
-//@brand-primary:                 #e17000;
-//@brand-lighter:                 #f6d4b2;
-//@brand-lightest:                #fbead9;
+// Oranje
+// @brand-primary:                 #e17000;
+// @brand-lighter:                 #f6d4b2;
+// @brand-lightest:                #fbead9;
 
-//roze
-//-------------------------------------------------
-//@brand-primary:                 #f092cd;
-//@brand-lighter:                 #fadef0;
-//@brand-lightest:                #fdeff8;
+// Roze
+// @brand-primary:                 #f092cd;
+// @brand-lighter:                 #fadef0;
+// @brand-lightest:                #fdeff8;
 
-//State Colors
-//-------------------------------------------------
+//== State Colors
 @brand-success:                         #39870c;
 @brand-success-lighter:                 #c3dbb6;
 @brand-success-lightest:                #efeddb;
@@ -207,8 +193,8 @@
 //
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
-//** Load fonts from this directory.
-@icon-font-path:          "../fonts/glyphicons/";
+//** Load fonts from this directory. We use Gulp to move the icons from the Bootstrap source to here
+@icon-font-path:          "@{rijksbootstrap-source}fonts/glyphicons/";
 //** File name for all font files.
 @icon-font-name:          "glyphicons-halflings-regular";
 //** Element ID within SVG icon file.

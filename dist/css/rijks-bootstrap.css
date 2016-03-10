@@ -249,8 +249,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('fonts/glyphicons/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons/glyphicons-halflings-regular.woff2') format('woff2'), url('fonts/glyphicons/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -4619,7 +4619,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #333333;
   line-height: 2.5em;
   padding-left: 20px;
-  background: url("../images/inline.png") no-repeat 3px -244px;
 }
 .breadcrumb > li.breadcrumb-home-item a {
   background: none;
@@ -4632,7 +4631,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .breadcrumb > li.breadcrumb-inner-item a {
     width: 35px;
     padding-left: 35px;
-    background: url("../images/inline.png") no-repeat 12px -244px;
   }
   .breadcrumb > li.breadcrumb-inner-item a:hover,
   .breadcrumb > li.breadcrumb-inner-item a:focus,
@@ -6751,9 +6749,6 @@ main,
   color: #333333;
   display: block;
   padding: 0 1em 0 2.1em;
-  background-image: url("../images/inline.png");
-  background-repeat: no-repeat;
-  background-position: 1em -251px;
   line-height: 1.8em;
   -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
@@ -6761,7 +6756,6 @@ main,
   transition: background-color 0.3s;
 }
 .sub-nav li a.open {
-  background: url("../images/inline.png") no-repeat 1em -505px;
   background-color: #e1eddb;
 }
 .sub-nav li a.active,
@@ -6772,7 +6766,6 @@ main,
 }
 .sub-nav li li a {
   padding: 0 1em 0 3em;
-  background: url("../images/inline.png") no-repeat 2.1em -249px;
 }
 .breadcrumbs-wrapper {
   min-height: 30px;
@@ -6841,45 +6834,8 @@ a {
   text-decoration: underline;
   cursor: pointer;
 }
-a.back-link,
-a.external-link,
-a.internal-link,
-.btn-link.internal-link,
-button.show-more,
-button.show-less,
-.mailto-link {
-  background-image: url("../images/inline.png");
-  background-repeat: no-repeat;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-a.external-link {
-  padding-left: 15px;
-  background-position: left -169px;
-}
-[class$="-link"] img {
-  margin-right: 5px;
-}
-a.back-link {
-  padding-left: 18px;
-  background-position: left -825px;
-}
-a.internal-link {
-  padding-right: 18px;
-  background-position: right -255px;
-}
-.btn-link.internal-link {
-  padding-right: 18px;
-  background-position: right -255px;
-}
 a.btn {
   text-decoration: none;
-}
-a.mailto-link {
-  padding-left: 15px;
-  background: url("../images/icon-mail.png") no-repeat left 5px;
 }
 .content a.pdf-link,
 .content a.word-link {
@@ -6898,14 +6854,6 @@ a.mailto-link {
 .aside hr {
   margin: 0 0 10px;
 }
-a.pdf-link {
-  background: url("../images/icon-pdf.png") no-repeat left top;
-  padding-left: 20px;
-}
-a.word-link {
-  background: url("../images/icon-word.png") no-repeat left top;
-  padding-left: 20px;
-}
 button.show-more {
   line-height: 1;
   text-decoration: underline;
@@ -6923,17 +6871,7 @@ button.show-more[aria-expanded="true"] {
   list-style: none;
   padding-left: 25px;
   color: #154273;
-  background: url("../images/sprite-icons-xl-1.2.png") no-repeat;
-  background-position: -103px -448px;
   margin-bottom: 10px;
-}
-.content ul.quickLinks li.pdf {
-  background-image: url("../images/icon-pdf.png");
-  background-position: left 5px;
-}
-.content ul.quickLinks li.word {
-  background-image: url("../images/icon-word.png");
-  background-position: left 5px;
 }
 .page-loading-modal {
   position: fixed;
