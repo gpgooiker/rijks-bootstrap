@@ -20,7 +20,30 @@ npm install
 To watch for file changes and build on the fly:
 
 ```bash
-gulp
+npm start
+```
+
+## Webpack
+
+To compile Rijks-bootstrap with  Webpack, install the loaders for .less and .woff files with:
+
+```bash
+npm install --save-dev less less-loader style-loader css-loader file-loader url-loader woff-loader
+```
+
+Configure webpack with:
+
+```js
+module: {
+  loaders: [
+    { test: /\.less/,
+      loaders: ['style', 'css', 'less']
+    },
+    { test: /\.woff/,
+      loaders: ['file', 'url']
+    }
+  ]
+}
 ```
 
 ## Licence
