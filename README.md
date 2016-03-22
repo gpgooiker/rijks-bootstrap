@@ -28,7 +28,7 @@ npm start
 To compile Rijks-bootstrap with  Webpack, install the loaders for .less and .woff files with:
 
 ```bash
-npm install --save-dev less less-loader style-loader css-loader file-loader url-loader woff-loader
+npm install --save-dev less less-loader style-loader css-loader file-loader url-loader
 ```
 
 Configure webpack with:
