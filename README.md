@@ -7,8 +7,6 @@ Include the stylesheets, fonts, images and javascript libraries in dist/. Then, 
 
 Rijks-bootstrap comes with jQuery, HoverIntent, Superfish and Bootstrap. If your project already includes jQuery, HoverIntent or Superfish, package your own js libaries.
 
-For an example, check http://gepiter.com/rijks-bootstrap/sample-ui-elements.html
-
 ## Building
 
 The package uses Gulp to build LESS, concatenate styling and concatenate the required javascript libraries. To build the package, run:
